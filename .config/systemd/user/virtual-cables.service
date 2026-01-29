@@ -1,0 +1,10 @@
+[Unit]
+Description=Virtual Audio Cables
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/systemd/virtual-cables.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,55 @@
+alias lg='lazygit'
+alias zsh-reload='source ~/.zshrc'
+
+# Bob related
+bob_use() {
+  if [[ -z "$1" ]]; then
+    echo "Usage: bob_use <stable|nightly>" >&2
+    return 1
+  fi
+
+  local version="$1"
+
+  # вызывать оригинальный bob use
+  command bob use "$version" || return 1
+
+  # записывать в файл
+  echo "$version" > ~/.nvim.version
+  echo "Set ~/.nvim.version to $version"
+}
+
+# алиас для удобства
+alias bobuse='bob_use'
+
+# Neovim related
+nvim() {
+  local version_file="$HOME/.nvim.version"
+  local version
+
+  # читаем версию
+  if [[ -f "$version_file" ]]; then
+    version="$(<"$version_file")"
+  else
+    version="stable"
+  fi
+
+  # выбираем NVIM_APPNAME
+  case "$version" in
+    nightly)
+      NVIM_APPNAME="nvim-nightly" command nvim "$@"
+      ;;
+    stable|"")
+      NVIM_APPNAME="nvim-stable" command nvim "$@"
+      ;;
+    *)
+      echo "Unknown version in ~/.nvim.version: $version" >&2
+      return 1
+      ;;
+  esac
+}
+
+# псевдонимы для удобства
+alias nv='nvim'
+alias v='nvim'
+
+alias doas='sudo'

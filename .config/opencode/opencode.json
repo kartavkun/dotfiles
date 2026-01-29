@@ -1,0 +1,23 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "gpt-oss:120b-cloud": {
+          "name": "gpt-oss"
+        },
+        "openchat": {
+          "name": "openchat"
+        },
+        "mistral": {
+          "name": "mistral-7b"
+        }
+      }
+    }
+  }
+}
