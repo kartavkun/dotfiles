@@ -27,17 +27,14 @@ arch_install(){
 
 	# mkdir -p ~/.local/share/nvim-nightly/site/pack/core/opt/blink.cmp/target/release/
 	# wget -O ~/.local/share/nvim-nightly/site/pack/core/opt/blink.cmp/target/release/libblink_cmp_fuzzy.so https://github.com/saghen/blink.cmp/releases/download/v1.8.0/x86_64-unknown-linux-gnu.so
-
-  git clone --depth 1 https://github.com/kartavkun/dotfiles ~/.dotfiles
-	cd ~/.dotfiles
-	stow .
-
-
 }
 
 mac_install(){
 	if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	  /usr/bin/zsh -c "git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions"
+	  /usr/bin/zsh -c "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+	  /usr/bin/zsh -c "git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting"
 	fi
 
 	# install brew
@@ -104,27 +101,32 @@ mac_install(){
 }
 # Определяем ОС
 OS="$(uname)"
-
 stow_link(){
-# Базовые конфиги (везде)
-APPS=("nvim-nightly" "alacritty" "kitty" "opencode" "tmux" "zsh" "scripts")
+	git clone --depth=1 https://github.com/kartavkun/dotfiles ~/.dotfiles
+	cd ~/.dotfiles
 
-# Конфиги только для Arch
-if [ "$OS" == "Linux" ]; then
-    APPS+=("hypr" "waybar" "rofi" "systemd")
-fi
+	# Базовые конфиги (везде)
+	APPS=("nvim-nightly" "alacritty" "kitty" "opencode" "tmux" "zsh" "scripts")
 
-# Конфиги только для Mac (MacBook Air)
-if [ "$OS" == "Darwin" ]; then
-    APPS+=("sketchybar" "skhd" "yabai")
-fi
+	# Конфиги только для Arch
+	if [ "$OS" == "Linux" ]; then
+	    APPS+=("hypr" "waybar" "rofi" "systemd")
+	fi
 
-for app in "${APPS[@]}"; do
-    echo "Stowing $app..."
-    stow -R -t "$HOME" "$app"
-done
+	# Конфиги только для Mac (MacBook Air)
+	if [ "$OS" == "Darwin" ]; then
+	    APPS+=("sketchybar" "skhd" "yabai")
+	fi
+
+	for app in "${APPS[@]}"; do
+	    echo "Stowing $app..."
+	    stow -R -t "$HOME" "$app"
+	done
 }
 
 if [ "$OS" == "Linux" ]; then
 	arch_install()
+fi
+if [ "$OS" == "Darwin" ]; then
+	mac_install()
 fi
