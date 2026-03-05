@@ -35,7 +35,7 @@ alt - v : yabai -m window --toggle float
 alt - m : yabai -m query --windows --space | jq '.[].id' | xargs -I{} yabai -m window {} --toggle zoom-fullscreen
 
 # open alacritty
-alt - return : alacritty
+alt - return : kitty
 
 alt - q : yabai -m window $(yabai -m query --windows --window | jq '.id') --close
 
