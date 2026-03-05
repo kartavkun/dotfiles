@@ -127,6 +127,7 @@ stow_link(){
 if [ "$OS" == "Linux" ]; then
 	arch_install()
 fi
+
 if [ "$OS" == "Darwin" ]; then
 	mac_install()
 fi
