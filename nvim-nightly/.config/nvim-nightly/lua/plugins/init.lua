@@ -21,7 +21,8 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-telescope/telescope.nvim" },
 	{ src = "https://github.com/nvim-lua/plenary.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
-	{ src = "https://github.com/benomahony/uv.nvim" }
+	{ src = "https://github.com/benomahony/uv.nvim" },
+	{ src = "https://github.com/3rd/image.nvim" }
 })
 
 require('plugins.blink')
@@ -42,3 +43,4 @@ require('plugins.surround')
 require('plugins.telescope')
 require('plugins.treesitter')
 require('plugins.uv')
+require('plugins.image')

@@ -1,6 +1,6 @@
 vim.o.termguicolors = true
 vim.o.background = 'dark'
 require("monokai-pro").setup({
-	-- variant = "autumn",
+	filter = "classic"
 })
 vim.cmd.colorscheme("monokai-pro")
