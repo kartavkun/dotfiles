@@ -1,0 +1,19 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/monokai_pro.toml"
+]
+
+[window]
+decorations = "buttonless"
+
+[font]
+size = 20
+normal = { family = "DejavuSansM Nerd Font", style = "Regular" }
+bold = { family = "DejavuSansM Nerd Font", style = "Bold" }
+italic = { family = "DejavuSansM Nerd Font", style = "Italic" }
+bold_italic = { family = "DejavuSansM Nerd Font", style = "Bold Italic" }
+
+# normal = { family = "SF Mono", style = "Regular" }
+# bold = { family = "SF Mono", style = "Bold" }
+# italic = { family = "SF Mono", style = "Italic" }
+# bold_italic = { family = "SF Mono", style = "Bold Italic" }

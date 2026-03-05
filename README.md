@@ -1,12 +1,10 @@
-# My Hyrpdots for Arch Linux
-Dotfiles and a bash script for easier setup of my personal linux environment
+# My dotfiles for Arch Linux and MacOS
+Dotfiles and a bash script for easier setup of my personal environment
 
-<!-- TODO: Сделать перевод README.md на русский и тюремный :D-->
+## Arch Linux
+![alt](linux.png)
 
-# Screenshots
-![alt](shot.png)
-
-# Dependencies
+### Dependencies
 - **WM:** Wayland Compositor[Hyprland](https://hyprland.org)
 - **Bar:** [Waybar](https://github.com/Alexays/Waybar)
 - **Terminal:** [kitty](https://github.com/kovidgoyal/kitty)
@@ -17,13 +15,13 @@ Dotfiles and a bash script for easier setup of my personal linux environment
 - **Text Editor:** [Neovim](https://neovim.io)
 - **Messengers:** [Telegram](https://desktop.telegram.org/) and [Discord](https://discord.com)
 
-# Installation
+### Installation
 Run this command:
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/kartavkun/dotfiles/main/install.sh)
 ``` 
 
-# Binds
+### Binds
 `SUPER = Windows key`
 - **Main binds:**
 ```
@@ -48,7 +46,7 @@ SUPER + PrtSc - Screenshot a window
 Ctrl+PrtSc - Screenshot a region
 ```
 
-<!-- # Notes -->
+<!-- ### Notes -->
 <!-- - All shortcuts and bind you can change in `~/.config/hypr/hyprland.conf` -->
 <!-- - All wallpapers located in `~/.config/hypr` -->
 <!-- - If you haven't wallpaper applied, you need run these commands:  -->

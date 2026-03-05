@@ -1,6 +1,6 @@
-#/bin/bash
+#!/usr/bin/env bash
 
-run_script(){
+arch_install(){
   sudo pacman -S git go base-devel
   sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
   sudo pacman-key --lsign-key 3056513887B78AEB
@@ -35,15 +35,96 @@ run_script(){
 
 }
 
-if [[ -f /etc/os-release ]]; then
-    . /etc/os-release
-    if [[ "$ID" == "arch" || "$ID_LIKE" == *"arch"* ]]; then
-        run_script
-    else
-        echo "Why you try to use this script on not Arch-based distro???"
-        exit 1
-    fi
-else
-    echo "idk what is your distro, sorry..."
-    exit 1
+mac_install(){
+	if [ ! -d "$HOME/.oh-my-zsh" ]; then
+	  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+	fi
+
+	# install brew
+	if ! command -v brew &>/dev/null; then
+	  echo "🍺 Installing Homebrew..."
+	  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	fi
+
+	# install homebrew packages
+	BREW_PACKAGES=(
+	  tmux
+	  kitty
+	  lazygit
+	  keycastr
+	  transmission
+	  uv
+	  ollama
+	  ffmpeg
+	  luarocks
+	  tree
+	  opencode
+	  libpcap
+	  go
+	  stow
+	  node
+	  yarn
+	  lua-language-server
+	  pyright
+	  pylint
+	  swiftformat
+	  swiftlint
+	  mermaid-cli
+	  asmvik/formulae/yabai
+	  asmvik/formulae/skhd
+	  FelixKratz/formulae/sketchybar
+	  marksman
+	  lua
+	  switchaudio-osx
+	  obs
+	  chromium
+	  zen
+	  spotify
+	  steam
+	  discord
+	  obsidian
+	  rustdesk
+	  distroav
+	  font-sketchybar-app-font
+	  font-maple-mono-nf
+	  font-dejavu-sans-mono-nerd-font
+	  font-jetbrains-mono-nerd-font
+	  fastfetch
+	  codex
+	)
+
+	echo "💻 Installing brew packages..."
+	for pkg in "${BREW_PACKAGES[@]}"; do
+	  if ! brew list "$pkg" &>/dev/null; then
+	    brew install "$pkg" || echo "⚠️ Failed to install $pkg"
+	  else
+	    echo "✔️ $pkg is already installed"
+	  fi
+	done
+}
+# Определяем ОС
+OS="$(uname)"
+
+stow_link(){
+# Базовые конфиги (везде)
+APPS=("nvim-nightly" "alacritty" "kitty" "opencode" "tmux" "zsh" "scripts")
+
+# Конфиги только для Arch
+if [ "$OS" == "Linux" ]; then
+    APPS+=("hypr" "waybar" "rofi" "systemd")
+fi
+
+# Конфиги только для Mac (MacBook Air)
+if [ "$OS" == "Darwin" ]; then
+    APPS+=("sketchybar" "skhd" "yabai")
+fi
+
+for app in "${APPS[@]}"; do
+    echo "Stowing $app..."
+    stow -R -t "$HOME" "$app"
+done
+}
+
+if [ "$OS" == "Linux" ]; then
+	arch_install()
 fi

@@ -1,0 +1,741 @@
+.
+├── alacritty
+│   └── .config
+│       └── alacritty
+│           ├── alacritty.toml
+│           └── themes
+├── .git
+│   ├── config
+│   ├── description
+│   ├── HEAD
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           └── origin
+│   │               └── HEAD
+│   ├── objects
+│   │   ├── info
+│   │   └── pack
+│   │       ├── pack-a224ceb441d4a9bf3754ea52b989c5f29c88412f.idx
+│   │       ├── pack-a224ceb441d4a9bf3754ea52b989c5f29c88412f.pack
+│   │       └── pack-a224ceb441d4a9bf3754ea52b989c5f29c88412f.rev
+│   ├── packed-refs
+│   ├── refs
+│   │   ├── heads
+│   │   │   └── main
+│   │   ├── remotes
+│   │   │   └── origin
+│   │   │       └── HEAD
+│   │   └── tags
+│   └── shallow
+├── hypr
+│   ├── hyprcfgs
+│   │   ├── autostart.conf
+│   │   ├── env.conf
+│   │   ├── input.conf
+│   │   ├── keybinds.conf
+│   │   ├── look_and_feel.conf
+│   │   ├── monitors.conf
+│   │   ├── my_programs.conf
+│   │   └── windowrules.conf
+│   ├── hyprland.conf
+│   ├── hyprpaper.conf
+│   ├── wallapapers
+│   │   ├── archchan.png
+│   │   ├── JustMonika.png
+│   │   ├── JustMonika_Vertical.png
+│   │   ├── MariyaTakeuchi.png
+│   │   └── MariyaTakeuchi_Vertical.png
+│   └── xdg-portal-hyprland
+├── install.sh
+├── kitty
+│   ├── current-theme.conf
+│   ├── Default.conf
+│   ├── gruvbox_dark.conf
+│   ├── kitty.conf
+│   ├── kitty.conf.bak
+│   └── kitty_themes
+│       └── kitty_gruvbox_theme-master
+│           ├── gruvboox_dark.conf
+│           ├── gruvbox_dark_hard.conf
+│           ├── gruvbox_dark_soft.conf
+│           ├── gruvbox_light.conf
+│           ├── gruvbox_light_hard.conf
+│           └── gruvbox_light_soft.conf
+├── nvim-nightly
+│   ├── init.lua
+│   ├── LICENSE
+│   ├── lua
+│   │   ├── config
+│   │   │   ├── init.lua
+│   │   │   ├── keymap.lua
+│   │   │   └── options.lua
+│   │   └── plugins
+│   │       ├── blink.lua
+│   │       ├── bufferline.lua
+│   │       ├── format.lua
+│   │       ├── init.lua
+│   │       ├── lint.lua
+│   │       ├── lsp.lua
+│   │       ├── lualine.lua
+│   │       ├── monokai.lua
+│   │       ├── noice.lua
+│   │       ├── nvim-tree.lua
+│   │       ├── pairs.lua
+│   │       ├── previewmd.lua
+│   │       ├── rendermd.lua
+│   │       ├── rpc.lua
+│   │       ├── solarized.lua
+│   │       ├── supermaven.lua
+│   │       ├── surround.lua
+│   │       ├── telescope.lua
+│   │       ├── treesitter.lua
+│   │       └── uv.lua
+│   ├── .neoconf.json
+│   └── nvim-pack-lock.json
+├── nvim-stable
+│   ├── init.lua
+│   ├── lazy-lock.json
+│   ├── lazyvim.json
+│   ├── LICENSE
+│   ├── lua
+│   │   ├── config
+│   │   │   ├── autocmds.lua
+│   │   │   ├── keymaps.lua
+│   │   │   ├── lazy.lua
+│   │   │   └── options.lua
+│   │   └── plugins
+│   │       ├── example.lua
+│   │       ├── mason.lua
+│   │       ├── md-render.lua
+│   │       ├── presence.lua
+│   │       ├── snacks.lua
+│   │       ├── solarized.lua
+│   │       ├── supermaven.lua
+│   │       ├── surround.lua
+│   │       ├── telescope.lua
+│   │       ├── tokyonight.lua
+│   │       └── uv.lua
+│   ├── .neoconf.json
+│   └── stylua.toml
+├── opencode
+│   └── opencode.json
+├── output
+├── README.md
+├── rofi
+│   ├── applets
+│   │   ├── bin
+│   │   │   ├── appasroot.sh
+│   │   │   ├── apps.sh
+│   │   │   ├── battery.sh
+│   │   │   ├── brightness.sh
+│   │   │   ├── mpd.sh
+│   │   │   ├── powermenu.sh
+│   │   │   ├── quicklinks.sh
+│   │   │   ├── screenshot.sh
+│   │   │   └── volume.sh
+│   │   ├── shared
+│   │   │   ├── colors.rasi
+│   │   │   ├── fonts.rasi
+│   │   │   └── theme.bash
+│   │   ├── type-1
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   └── style-3.rasi
+│   │   ├── type-2
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   └── style-3.rasi
+│   │   ├── type-3
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   └── style-3.rasi
+│   │   ├── type-4
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   └── style-3.rasi
+│   │   └── type-5
+│   │       ├── style-1.rasi
+│   │       ├── style-2.rasi
+│   │       └── style-3.rasi
+│   ├── colors
+│   │   ├── adapta.rasi
+│   │   ├── arc.rasi
+│   │   ├── black.rasi
+│   │   ├── catppuccin.rasi
+│   │   ├── cyberpunk.rasi
+│   │   ├── dracula.rasi
+│   │   ├── everforest.rasi
+│   │   ├── gruvbox.rasi
+│   │   ├── lovelace.rasi
+│   │   ├── navy.rasi
+│   │   ├── nord.rasi
+│   │   ├── onedark.rasi
+│   │   ├── paper.rasi
+│   │   ├── solarized.rasi
+│   │   ├── tokyonight.rasi
+│   │   └── yousai.rasi
+│   ├── config.rasi
+│   ├── images
+│   │   ├── a.png
+│   │   ├── b.png
+│   │   ├── c.png
+│   │   ├── d.png
+│   │   ├── e11.jpg
+│   │   ├── e.jpg
+│   │   ├── flowers-1.png
+│   │   ├── flowers-2.png
+│   │   ├── flowers-3.png
+│   │   ├── f.png
+│   │   ├── g.png
+│   │   ├── gradient.png
+│   │   ├── h.jpg
+│   │   ├── i1.jpg
+│   │   ├── i.jpg
+│   │   ├── j.jpg
+│   │   ├── paper.png
+│   │   └── user.jpeg
+│   ├── launchers
+│   │   ├── type-1
+│   │   │   ├── launcher.sh
+│   │   │   ├── shared
+│   │   │   │   ├── colors.rasi
+│   │   │   │   └── fonts.rasi
+│   │   │   ├── style-10.rasi
+│   │   │   ├── style-11.rasi
+│   │   │   ├── style-12.rasi
+│   │   │   ├── style-13.rasi
+│   │   │   ├── style-14.rasi
+│   │   │   ├── style-15.rasi
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   ├── style-5.rasi
+│   │   │   ├── style-6.rasi
+│   │   │   ├── style-7.rasi
+│   │   │   ├── style-8.rasi
+│   │   │   └── style-9.rasi
+│   │   ├── type-2
+│   │   │   ├── launcher.sh
+│   │   │   ├── shared
+│   │   │   │   ├── colors.rasi
+│   │   │   │   └── fonts.rasi
+│   │   │   ├── style-10.rasi
+│   │   │   ├── style-11.rasi
+│   │   │   ├── style-12.rasi
+│   │   │   ├── style-13.rasi
+│   │   │   ├── style-14.rasi
+│   │   │   ├── style-15.rasi
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   ├── style-5.rasi
+│   │   │   ├── style-6.rasi
+│   │   │   ├── style-7.rasi
+│   │   │   ├── style-8.rasi
+│   │   │   └── style-9.rasi
+│   │   ├── type-3
+│   │   │   ├── launcher.sh
+│   │   │   ├── shared
+│   │   │   │   ├── colors.rasi
+│   │   │   │   └── fonts.rasi
+│   │   │   ├── style-10.rasi
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   ├── style-5.rasi
+│   │   │   ├── style-6.rasi
+│   │   │   ├── style-7.rasi
+│   │   │   ├── style-8.rasi
+│   │   │   └── style-9.rasi
+│   │   ├── type-4
+│   │   │   ├── launcher.sh
+│   │   │   ├── shared
+│   │   │   │   ├── colors.rasi
+│   │   │   │   └── fonts.rasi
+│   │   │   ├── style-10.rasi
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   ├── style-5.rasi
+│   │   │   ├── style-6.rasi
+│   │   │   ├── style-7.rasi
+│   │   │   ├── style-8.rasi
+│   │   │   └── style-9.rasi
+│   │   ├── type-5
+│   │   │   ├── launcher.sh
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   └── style-5.rasi
+│   │   ├── type-6
+│   │   │   ├── clipboard.sh
+│   │   │   ├── launcher.sh
+│   │   │   ├── style-10.rasi
+│   │   │   ├── style-11.rasi
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   ├── style-5.rasi
+│   │   │   ├── style-6.rasi
+│   │   │   ├── style-7.rasi
+│   │   │   ├── style-8.rasi
+│   │   │   └── style-9.rasi
+│   │   └── type-7
+│   │       ├── launcher.sh
+│   │       ├── style-10.rasi
+│   │       ├── style-1.rasi
+│   │       ├── style-2.rasi
+│   │       ├── style-3.rasi
+│   │       ├── style-4.rasi
+│   │       ├── style-5.rasi
+│   │       ├── style-6.rasi
+│   │       ├── style-7.rasi
+│   │       ├── style-8.rasi
+│   │       └── style-9.rasi
+│   ├── powermenu
+│   │   ├── type-1
+│   │   │   ├── powermenu.sh
+│   │   │   ├── shared
+│   │   │   │   ├── colors.rasi
+│   │   │   │   └── fonts.rasi
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   └── style-5.rasi
+│   │   ├── type-2
+│   │   │   ├── powermenu.sh
+│   │   │   ├── shared
+│   │   │   │   ├── colors.rasi
+│   │   │   │   └── fonts.rasi
+│   │   │   ├── style-10.rasi
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   ├── style-5.rasi
+│   │   │   ├── style-6.rasi
+│   │   │   ├── style-7.rasi
+│   │   │   ├── style-8.rasi
+│   │   │   └── style-9.rasi
+│   │   ├── type-3
+│   │   │   ├── powermenu.sh
+│   │   │   ├── shared
+│   │   │   │   ├── colors.rasi
+│   │   │   │   ├── confirm.rasi
+│   │   │   │   └── fonts.rasi
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   └── style-5.rasi
+│   │   ├── type-4
+│   │   │   ├── powermenu.sh
+│   │   │   ├── shared
+│   │   │   │   ├── colors.rasi
+│   │   │   │   ├── confirm.rasi
+│   │   │   │   └── fonts.rasi
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   └── style-5.rasi
+│   │   ├── type-5
+│   │   │   ├── powermenu.sh
+│   │   │   ├── style-1.rasi
+│   │   │   ├── style-2.rasi
+│   │   │   ├── style-3.rasi
+│   │   │   ├── style-4.rasi
+│   │   │   └── style-5.rasi
+│   │   └── type-6
+│   │       ├── powermenu.sh
+│   │       ├── style-1.rasi
+│   │       ├── style-2.rasi
+│   │       ├── style-3.rasi
+│   │       ├── style-4.rasi
+│   │       └── style-5.rasi
+│   ├── rofi
+│   │   ├── applets
+│   │   │   ├── bin
+│   │   │   │   ├── appasroot.sh
+│   │   │   │   ├── apps.sh
+│   │   │   │   ├── battery.sh
+│   │   │   │   ├── brightness.sh
+│   │   │   │   ├── mpd.sh
+│   │   │   │   ├── powermenu.sh
+│   │   │   │   ├── quicklinks.sh
+│   │   │   │   ├── screenshot.sh
+│   │   │   │   └── volume.sh
+│   │   │   ├── shared
+│   │   │   │   ├── colors.rasi
+│   │   │   │   ├── fonts.rasi
+│   │   │   │   └── theme.bash
+│   │   │   ├── type-1
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   └── style-3.rasi
+│   │   │   ├── type-2
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   └── style-3.rasi
+│   │   │   ├── type-3
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   └── style-3.rasi
+│   │   │   ├── type-4
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   └── style-3.rasi
+│   │   │   └── type-5
+│   │   │       ├── style-1.rasi
+│   │   │       ├── style-2.rasi
+│   │   │       └── style-3.rasi
+│   │   ├── colors
+│   │   │   ├── adapta.rasi
+│   │   │   ├── arc.rasi
+│   │   │   ├── black.rasi
+│   │   │   ├── catppuccin.rasi
+│   │   │   ├── cyberpunk.rasi
+│   │   │   ├── dracula.rasi
+│   │   │   ├── everforest.rasi
+│   │   │   ├── gruvbox.rasi
+│   │   │   ├── lovelace.rasi
+│   │   │   ├── navy.rasi
+│   │   │   ├── nord.rasi
+│   │   │   ├── onedark.rasi
+│   │   │   ├── paper.rasi
+│   │   │   ├── solarized.rasi
+│   │   │   ├── tokyonight.rasi
+│   │   │   └── yousai.rasi
+│   │   ├── config.rasi
+│   │   ├── images
+│   │   │   ├── a.png
+│   │   │   ├── b.png
+│   │   │   ├── c.png
+│   │   │   ├── d.png
+│   │   │   ├── e.jpg
+│   │   │   ├── flowers-1.png
+│   │   │   ├── flowers-2.png
+│   │   │   ├── flowers-3.png
+│   │   │   ├── f.png
+│   │   │   ├── g.png
+│   │   │   ├── gradient.png
+│   │   │   ├── h.jpg
+│   │   │   ├── i.jpg
+│   │   │   ├── j.jpg
+│   │   │   ├── paper.png
+│   │   │   └── user.jpeg
+│   │   ├── launchers
+│   │   │   ├── type-1
+│   │   │   │   ├── launcher.sh
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── colors.rasi
+│   │   │   │   │   └── fonts.rasi
+│   │   │   │   ├── style-10.rasi
+│   │   │   │   ├── style-11.rasi
+│   │   │   │   ├── style-12.rasi
+│   │   │   │   ├── style-13.rasi
+│   │   │   │   ├── style-14.rasi
+│   │   │   │   ├── style-15.rasi
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   ├── style-5.rasi
+│   │   │   │   ├── style-6.rasi
+│   │   │   │   ├── style-7.rasi
+│   │   │   │   ├── style-8.rasi
+│   │   │   │   └── style-9.rasi
+│   │   │   ├── type-2
+│   │   │   │   ├── launcher.sh
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── colors.rasi
+│   │   │   │   │   └── fonts.rasi
+│   │   │   │   ├── style-10.rasi
+│   │   │   │   ├── style-11.rasi
+│   │   │   │   ├── style-12.rasi
+│   │   │   │   ├── style-13.rasi
+│   │   │   │   ├── style-14.rasi
+│   │   │   │   ├── style-15.rasi
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   ├── style-5.rasi
+│   │   │   │   ├── style-6.rasi
+│   │   │   │   ├── style-7.rasi
+│   │   │   │   ├── style-8.rasi
+│   │   │   │   └── style-9.rasi
+│   │   │   ├── type-3
+│   │   │   │   ├── launcher.sh
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── colors.rasi
+│   │   │   │   │   └── fonts.rasi
+│   │   │   │   ├── style-10.rasi
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   ├── style-5.rasi
+│   │   │   │   ├── style-6.rasi
+│   │   │   │   ├── style-7.rasi
+│   │   │   │   ├── style-8.rasi
+│   │   │   │   └── style-9.rasi
+│   │   │   ├── type-4
+│   │   │   │   ├── launcher.sh
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── colors.rasi
+│   │   │   │   │   └── fonts.rasi
+│   │   │   │   ├── style-10.rasi
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   ├── style-5.rasi
+│   │   │   │   ├── style-6.rasi
+│   │   │   │   ├── style-7.rasi
+│   │   │   │   ├── style-8.rasi
+│   │   │   │   └── style-9.rasi
+│   │   │   ├── type-5
+│   │   │   │   ├── launcher.sh
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   └── style-5.rasi
+│   │   │   ├── type-6
+│   │   │   │   ├── clipboard.sh
+│   │   │   │   ├── clipboard-x.sh
+│   │   │   │   ├── launcher.sh
+│   │   │   │   ├── style-10.rasi
+│   │   │   │   ├── style-11.rasi
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   ├── style-5.rasi
+│   │   │   │   ├── style-6.rasi
+│   │   │   │   ├── style-7.rasi
+│   │   │   │   ├── style-8.rasi
+│   │   │   │   └── style-9.rasi
+│   │   │   └── type-7
+│   │   │       ├── launcher.sh
+│   │   │       ├── style-10.rasi
+│   │   │       ├── style-1.rasi
+│   │   │       ├── style-2.rasi
+│   │   │       ├── style-3.rasi
+│   │   │       ├── style-4.rasi
+│   │   │       ├── style-5.rasi
+│   │   │       ├── style-6.rasi
+│   │   │       ├── style-7.rasi
+│   │   │       ├── style-8.rasi
+│   │   │       └── style-9.rasi
+│   │   ├── powermenu
+│   │   │   ├── type-1
+│   │   │   │   ├── powermenu.sh
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── colors.rasi
+│   │   │   │   │   └── fonts.rasi
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   └── style-5.rasi
+│   │   │   ├── type-2
+│   │   │   │   ├── powermenu.sh
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── colors.rasi
+│   │   │   │   │   └── fonts.rasi
+│   │   │   │   ├── style-10.rasi
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   ├── style-5.rasi
+│   │   │   │   ├── style-6.rasi
+│   │   │   │   ├── style-7.rasi
+│   │   │   │   ├── style-8.rasi
+│   │   │   │   └── style-9.rasi
+│   │   │   ├── type-3
+│   │   │   │   ├── powermenu.sh
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── colors.rasi
+│   │   │   │   │   ├── confirm.rasi
+│   │   │   │   │   └── fonts.rasi
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   └── style-5.rasi
+│   │   │   ├── type-4
+│   │   │   │   ├── powermenu.sh
+│   │   │   │   ├── shared
+│   │   │   │   │   ├── colors.rasi
+│   │   │   │   │   ├── confirm.rasi
+│   │   │   │   │   └── fonts.rasi
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   └── style-5.rasi
+│   │   │   ├── type-5
+│   │   │   │   ├── powermenu.sh
+│   │   │   │   ├── style-1.rasi
+│   │   │   │   ├── style-2.rasi
+│   │   │   │   ├── style-3.rasi
+│   │   │   │   ├── style-4.rasi
+│   │   │   │   └── style-5.rasi
+│   │   │   └── type-6
+│   │   │       ├── powermenu.sh
+│   │   │       ├── style-1.rasi
+│   │   │       ├── style-2.rasi
+│   │   │       ├── style-3.rasi
+│   │   │       ├── style-4.rasi
+│   │   │       └── style-5.rasi
+│   │   └── scripts
+│   │       ├── launcher_t1 -> ../launchers/type-1/launcher.sh
+│   │       ├── launcher_t2 -> ../launchers/type-2/launcher.sh
+│   │       ├── launcher_t3 -> ../launchers/type-3/launcher.sh
+│   │       ├── launcher_t4 -> ../launchers/type-4/launcher.sh
+│   │       ├── launcher_t5 -> ../launchers/type-5/launcher.sh
+│   │       ├── launcher_t6 -> ../launchers/type-6/launcher.sh
+│   │       ├── launcher_t7 -> ../launchers/type-7/launcher.sh
+│   │       ├── powermenu_t1 -> ../powermenu/type-1/powermenu.sh
+│   │       ├── powermenu_t2 -> ../powermenu/type-2/powermenu.sh
+│   │       ├── powermenu_t3 -> ../powermenu/type-3/powermenu.sh
+│   │       ├── powermenu_t4 -> ../powermenu/type-4/powermenu.sh
+│   │       ├── powermenu_t5 -> ../powermenu/type-5/powermenu.sh
+│   │       └── powermenu_t6 -> ../powermenu/type-6/powermenu.sh
+│   └── scripts
+│       ├── launcher_t1 -> ../launchers/type-1/launcher.sh
+│       ├── launcher_t2 -> ../launchers/type-2/launcher.sh
+│       ├── launcher_t3 -> ../launchers/type-3/launcher.sh
+│       ├── launcher_t4 -> ../launchers/type-4/launcher.sh
+│       ├── launcher_t5 -> ../launchers/type-5/launcher.sh
+│       ├── launcher_t6 -> ../launchers/type-6/launcher.sh
+│       ├── launcher_t7 -> ../launchers/type-7/launcher.sh
+│       ├── powermenu_t1 -> ../powermenu/type-1/powermenu.sh
+│       ├── powermenu_t2 -> ../powermenu/type-2/powermenu.sh
+│       ├── powermenu_t3 -> ../powermenu/type-3/powermenu.sh
+│       ├── powermenu_t4 -> ../powermenu/type-4/powermenu.sh
+│       ├── powermenu_t5 -> ../powermenu/type-5/powermenu.sh
+│       └── powermenu_t6 -> ../powermenu/type-6/powermenu.sh
+├── scripts
+│   ├── open-github.sh
+│   ├── open-pdf.sh
+│   ├── time.sh
+│   ├── tmux-session-dispensary.sh
+│   └── tmux-sessionizer.sh
+├── shot.png
+├── sketchybar
+│   ├── colors.lua
+│   ├── helpers
+│   │   ├── event_providers
+│   │   │   ├── cpu_load
+│   │   │   │   ├── cpu.h
+│   │   │   │   ├── cpu_load.c
+│   │   │   │   └── makefile
+│   │   │   ├── makefile
+│   │   │   ├── network_load
+│   │   │   │   ├── makefile
+│   │   │   │   ├── network.h
+│   │   │   │   └── network_load.c
+│   │   │   └── sketchybar.h
+│   │   ├── .gitignore
+│   │   ├── init.lua
+│   │   ├── makefile
+│   │   ├── menus
+│   │   │   ├── makefile
+│   │   │   └── menus.c
+│   │   ├── spaces_util
+│   │   │   ├── icon_map.lua
+│   │   │   └── sbar_util.lua
+│   │   └── widget_utils.lua
+│   ├── icons.lua
+│   ├── init.lua
+│   ├── install.sh
+│   ├── items
+│   │   ├── init.lua
+│   │   ├── left
+│   │   │   ├── front_app.lua
+│   │   │   ├── init.lua
+│   │   │   ├── logo.lua
+│   │   │   ├── menus.lua
+│   │   │   └── spaces.lua
+│   │   ├── music
+│   │   │   ├── init.lua
+│   │   │   └── media-control.lua
+│   │   ├── right
+│   │   │   ├── battery.lua
+│   │   │   ├── brew.lua
+│   │   │   ├── calendar.lua
+│   │   │   ├── cpu.lua
+│   │   │   ├── init.lua
+│   │   │   ├── kb_layout.lua
+│   │   │   ├── memory.lua
+│   │   │   ├── network.lua
+│   │   │   ├── toggle_stats.lua
+│   │   │   ├── volume.lua
+│   │   │   └── wifi.lua
+│   │   └── window_managers
+│   │       ├── aerospace.lua
+│   │       └── macos_native.lua
+│   ├── README.md
+│   ├── sketchybarrc
+│   └── stylua.toml
+├── skhd
+│   └── skhdrc
+├── .stow-local-ignore
+├── systemd
+│   ├── user
+│   │   └── virtual-cables.service
+│   └── virtual-cables.sh
+├── tmux
+│   ├── plugins
+│   │   ├── tmux-keyboard-layout
+│   │   ├── tmux-which-key
+│   │   └── tpm
+│   └── tmux.conf
+├── Untitled Folder
+│   └── .config
+│       └── yabai
+│           └── yabairc
+├── waybar
+│   ├── config.jsonc
+│   ├── scripts
+│   │   ├── mediaplayer.py
+│   │   └── spotify.sh
+│   └── style.css
+└── zsh
+    ├── .zshaliases
+    └── .zshrc
+
+133 directories, 606 files
