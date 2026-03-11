@@ -17,7 +17,7 @@ arch_install(){
       nemo nemo-fileroller telegram-desktop dunst nerd-fonts nwg-look \
       pavucontrol pamixer playerctl python-gobject kvantum \
       lua-language-server pyright pylint stow tree uv ollama ffmpeg \
-      lazygit opencode wget curl zsh paru-bin
+      lazygit opencode wget curl zsh paru
 
   install_omz
   bob install nightly && bob install stable
