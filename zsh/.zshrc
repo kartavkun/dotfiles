@@ -115,3 +115,4 @@ export TERM=xterm-256color
 # fi
 
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+# cd $HOME

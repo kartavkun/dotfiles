@@ -1,37 +1,42 @@
-require('blink-cmp').setup({
-	keymap = { preset = 'enter' },
-  completion = {
-    -- 'prefix' will fuzzy match on the text before the cursor
-    -- 'full' will fuzzy match on the text before _and_ after the cursor
-    -- example: 'foo_|_bar' will match 'foo_' for 'prefix' and 'foo__bar' for 'full'
-    keyword = { range = 'full' },
-
-    -- Disable auto brackets
-    -- NOTE: some LSPs may add auto brackets themselves anyway
-    accept = { auto_brackets = { enabled = false }, },
-
-    -- Don't select by default, auto insert on selection
-    list = { selection = { preselect = false, auto_insert = true } },
-    -- or set via a function
-    list = { selection = { preselect = function(ctx) return vim.bo.filetype ~= 'markdown' end } },
-
-    menu = {
-      -- Don't automatically show the completion menu
-      auto_show = true,
-
-      -- nvim-cmp style menu
-      draw = {
-        columns = {
-          { "label", "label_description", gap = 1 },
-          { "kind_icon", "kind" }
-        },
-      }
+require('blink.cmp').setup({
+    fuzzy = { implementation = 'prefer_rust_with_warning' },
+    -- fuzzy = { implementation = 'prefer_rust' },
+    signature = { enabled = true },
+    keymap = {
+        preset = "enter",
+        ["<C-space>"] = {},
+        ["<C-p>"] = {},
+        ["<Tab>"] = {},
+        ["<S-Tab>"] = {},
+        ["<C-y>"] = { "show", "show_documentation", "hide_documentation" },
+        ["<C-n>"] = { "select_and_accept" },
+        ["<C-k>"] = { "select_prev", "fallback" },
+        ["<C-j>"] = { "select_next", "fallback" },
+        ["<C-b>"] = { "scroll_documentation_down", "fallback" },
+        ["<C-f>"] = { "scroll_documentation_up", "fallback" },
+        ["<C-l>"] = { "snippet_forward", "fallback" },
+        ["<C-h>"] = { "snippet_backward", "fallback" },
+        -- ["<C-e>"] = { "hide" },
     },
 
-    -- Show documentation when selecting a completion item
-    documentation = { auto_show = true, auto_show_delay_ms = 100 },
+    appearance = {
+        use_nvim_cmp_as_default = true,
+        nerd_font_variant = "normal",
+    },
 
-    -- Display a preview of the selected item on the current line
-    ghost_text = { enabled = true },
-  },
+    completion = {
+        documentation = {
+            auto_show = true,
+            auto_show_delay_ms = 200,
+        }
+    },
+
+    cmdline = {
+        keymap = {
+            preset = 'inherit',
+            ['<CR>'] = { 'accept_and_enter', 'fallback' },
+        },
+    },
+
+    sources = { default = { "lsp" } }
 })

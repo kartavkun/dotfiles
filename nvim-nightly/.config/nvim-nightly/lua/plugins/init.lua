@@ -1,5 +1,5 @@
 vim.pack.add({
-	{ src = 'https://github.com/Saghen/blink.cmp', version = vim.version.range('*') },
+	{ src = 'https://github.com/Saghen/blink.cmp', version = vim.version.range("1.*")  },
 	{ src = 'https://github.com/akinsho/bufferline.nvim' },
 	{ src = 'https://github.com/nvim-tree/nvim-web-devicons' },
 	{ src = "https://github.com/stevearc/conform.nvim" },
@@ -7,7 +7,7 @@ vim.pack.add({
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 	-- { src = "https://github.com/folke/noice.nvim" },
-	-- { src = "https://github.com/nvim-tree/nvim-tree.lua" },
+	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
 	{ src = "https://github.com/MunifTanjim/nui.nvim" },
 	{ src = "https://github.com/rcarriga/nvim-notify" },
 	{ src = "https://github.com/nvim-mini/mini.pairs" },
@@ -32,7 +32,7 @@ require('plugins.lint')
 require('plugins.lsp')
 require('plugins.lualine')
 -- require('plugins.noice')
--- require('plugins.nvim-tree')
+require('plugins.nvim-tree')
 require('plugins.pairs')
 require('plugins.previewmd')
 require('plugins.rendermd')

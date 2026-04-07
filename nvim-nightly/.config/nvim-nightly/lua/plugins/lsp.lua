@@ -44,11 +44,17 @@ vim.lsp.config('sourcekit', {
 vim.lsp.enable('sourcekit')
 
 -- =========================
--- Marksman LSP (Markdown)
+-- Rust LSP (rust-analyzer)
 -- =========================
--- vim.lsp.config('marksman', {
---   cmd = { 'marksman', 'server' },
---   filetypes = { 'markdown', 'markdown.mdx' },
---   root_markers = { '.marksman.toml', '.git' },
--- })
+vim.lsp.config('rust_analyzer', {
+	cmd = { 'rust-analyzer' },
+	filetypes = { 'rust' },
+	root_markers = { 'Cargo.toml' }
+})
+vim.lsp.enable('rust_analyzer')
+
+-- =========================
+-- Markdown LSP (marksman)
+-- =========================
+vim.lsp.config('marksman', {})
 vim.lsp.enable('marksman')

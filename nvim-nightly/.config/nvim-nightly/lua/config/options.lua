@@ -19,4 +19,3 @@ vim.opt.undodir = vim.fn.stdpath('data') .. '/undo'  -- куда сохраня�
 --   autocmd VimLeavePre * mksession! ~/.config/nvim/session.vim
 --   autocmd VimEnter * source ~/.config/nvim/session.vim
 -- ]])
-

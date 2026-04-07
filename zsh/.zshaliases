@@ -2,24 +2,20 @@ alias lg='lazygit'
 alias zsh-reload='source ~/.zshrc'
 
 # Bob related
-bob_use() {
+nvim_use() {
   if [[ -z "$1" ]]; then
-    echo "Usage: bob_use <stable|nightly>" >&2
+    echo "Usage: bob_use <lazy|pack>" >&2
     return 1
   fi
 
   local version="$1"
-
-  # вызывать оригинальный bob use
-  command bob use "$version" || return 1
 
   # записывать в файл
   echo "$version" > ~/.nvim.version
   echo "Set ~/.nvim.version to $version"
 }
 
-# алиас для удобства
-alias bobuse='bob_use'
+alias nvimuse='nvim_use'
 
 # Neovim related
 nvim() {
@@ -35,10 +31,10 @@ nvim() {
 
   # выбираем NVIM_APPNAME
   case "$version" in
-    nightly)
+    pack)
       NVIM_APPNAME="nvim-nightly" command nvim "$@"
       ;;
-    stable|"")
+    lazy|"")
       NVIM_APPNAME="nvim-stable" command nvim "$@"
       ;;
     *)
@@ -53,3 +49,46 @@ alias nv='nvim'
 alias v='nvim'
 
 alias doas='sudo'
+
+alias clear="clear && printf '\e[3J'"
+
+create_swiftui_makefile() {
+  SCHEME=${1:-App}
+  BUNDLE_ID=${2:-com.example.app}
+  DEVICE=${3:-"iPhone 15"}
+
+  cat > Makefile <<EOF
+SCHEME ?= $SCHEME
+DEVICE ?= $DEVICE
+BUNDLE_ID ?= $BUNDLE_ID
+BUILD_DIR ?= build
+
+.PHONY: build run clean logs boot
+
+build:
+	xcodebuild \\
+	-scheme \$(SCHEME) \\
+	-destination 'platform=iOS Simulator,name=\$(DEVICE)' \\
+	-derivedDataPath \$(BUILD_DIR) \\
+	-quiet
+
+run: build
+	xcrun simctl boot "\$(DEVICE)" || true
+	xcrun simctl install booted \$(BUILD_DIR)/Build/Products/Debug-iphonesimulator/\$(SCHEME).app
+	xcrun simctl launch booted \$(BUNDLE_ID)
+
+logs:
+	xcrun simctl spawn booted log stream --level debug
+
+clean:
+	rm -rf \$(BUILD_DIR)
+
+boot:
+	xcrun simctl boot "\$(DEVICE)" || true
+EOF
+
+  echo "✅ Makefile создан:"
+  echo "   SCHEME=$SCHEME"
+  echo "   BUNDLE_ID=$BUNDLE_ID"
+  echo "   DEVICE=$DEVICE"
+}

@@ -39,3 +39,11 @@ map("n", "<leader>цй", "<cmd>wq<cr>")
 -- файловый менеджер
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
 -- map("n", "<leader>е", "<cmd>NvimTreeToggle<cr>")
+
+vim.keymap.set("n", "<leader>t", function()
+  vim.cmd("split")
+  vim.fn.termopen("/bin/zsh", {
+    cwd = vim.fn.expand("%:p:h"),
+  })
+  vim.cmd("startinsert")
+end)
