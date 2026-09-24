@@ -18,7 +18,7 @@ yabai -m signal --add event=display_changed action="yabai -m window --focus \$(y
 
 # yabai -m config external_bar all:$(($(sketchybar --query bar | jq .height) + 0)):0
 
-yabai -m config top_padding    40
+yabai -m config top_padding    50
 yabai -m config bottom_padding 8
 yabai -m config left_padding   8
 yabai -m config right_padding  8

@@ -26,7 +26,7 @@ nvim() {
   if [[ -f "$version_file" ]]; then
     version="$(<"$version_file")"
   else
-    version="stable"
+    version="pack"
   fi
 
   # выбираем NVIM_APPNAME
@@ -36,6 +36,9 @@ nvim() {
       ;;
     lazy|"")
       NVIM_APPNAME="nvim-stable" command nvim "$@"
+      ;;
+    nvim)
+      NVIM_APPNAME="nvim" command nvim "$@"
       ;;
     *)
       echo "Unknown version in ~/.nvim.version: $version" >&2
@@ -55,11 +58,21 @@ alias clear="clear && printf '\e[3J'"
 create_swiftui_makefile() {
   SCHEME=${1:-App}
   BUNDLE_ID=${2:-com.example.app}
-  DEVICE=${3:-"iPhone 15"}
+  DEVICE=${3:-"iPhone 17"}
+  DEVICE_ID=${4:-""}
+
+  DESTINATION="'platform=iOS Simulator,name=\$(DEVICE)'"
+  SIM_TARGET="\$(DEVICE)"
+
+  if [[ -n "$DEVICE_ID" ]]; then
+    DESTINATION="'id=\$(DEVICE_ID)'"
+    SIM_TARGET="\$(DEVICE_ID)"
+  fi
 
   cat > Makefile <<EOF
 SCHEME ?= $SCHEME
 DEVICE ?= $DEVICE
+DEVICE_ID ?= $DEVICE_ID
 BUNDLE_ID ?= $BUNDLE_ID
 BUILD_DIR ?= build
 
@@ -68,27 +81,29 @@ BUILD_DIR ?= build
 build:
 	xcodebuild \\
 	-scheme \$(SCHEME) \\
-	-destination 'platform=iOS Simulator,name=\$(DEVICE)' \\
+	-destination $DESTINATION \\
 	-derivedDataPath \$(BUILD_DIR) \\
-	-quiet
+	-quiet \\
+	build
 
 run: build
-	xcrun simctl boot "\$(DEVICE)" || true
-	xcrun simctl install booted \$(BUILD_DIR)/Build/Products/Debug-iphonesimulator/\$(SCHEME).app
-	xcrun simctl launch booted \$(BUNDLE_ID)
+	xcrun simctl boot "$SIM_TARGET" || true
+	xcrun simctl install "$SIM_TARGET" \$(BUILD_DIR)/Build/Products/Debug-iphonesimulator/\$(SCHEME).app
+	xcrun simctl launch "$SIM_TARGET" \$(BUNDLE_ID)
 
 logs:
-	xcrun simctl spawn booted log stream --level debug
+	xcrun simctl spawn "$SIM_TARGET" log stream --level debug
 
 clean:
 	rm -rf \$(BUILD_DIR)
 
 boot:
-	xcrun simctl boot "\$(DEVICE)" || true
+	xcrun simctl boot "$SIM_TARGET" || true
 EOF
 
   echo "✅ Makefile создан:"
   echo "   SCHEME=$SCHEME"
   echo "   BUNDLE_ID=$BUNDLE_ID"
   echo "   DEVICE=$DEVICE"
+  [[ -n "$DEVICE_ID" ]] && echo "   DEVICE_ID=$DEVICE_ID"
 }

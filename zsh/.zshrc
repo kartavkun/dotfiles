@@ -116,3 +116,14 @@ export TERM=xterm-256color
 
 export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 # cd $HOME
+
+# The next line updates PATH for CLI.
+if [ -f '/Users/kartavkun/yandex-cloud/path.bash.inc' ]; then source '/Users/kartavkun/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/Users/kartavkun/yandex-cloud/completion.zsh.inc' ]; then source '/Users/kartavkun/yandex-cloud/completion.zsh.inc'; fi
+
+
+eval $(thefuck --alias)
+
+export PATH="/Users/kartavkun/.local/bin:$PATH"
