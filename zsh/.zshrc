@@ -127,3 +127,5 @@ if [ -f '/Users/kartavkun/yandex-cloud/completion.zsh.inc' ]; then source '/User
 eval $(thefuck --alias)
 
 export PATH="/Users/kartavkun/.local/bin:$PATH"
+
+source <(fzf --zsh)
